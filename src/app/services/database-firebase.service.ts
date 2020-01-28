@@ -1,15 +1,20 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
+import itemsong from '../interfaces/itemsong';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DatabaseFirebaseService {
-
-  constructor(private db: AngularFirestore) { }
+  
+  collection$: AngularFirestoreCollection<itemsong>;
+  
+  constructor(private db: AngularFirestore) {
+    this.collection$ = this.db.collection('canciones');
+  }
 
   getSongs() {
-    return this.db.collection('canciones').valueChanges();
+    return this.collection$.valueChanges();
   }
 
   addSong() {}

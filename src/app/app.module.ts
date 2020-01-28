@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { ListsongsComponent } from './components/listsongs/listsongs.component';
 import { AddsongComponent } from './components/addsong/addsong.component';
 import { environment } from 'src/environments/environment';
+import { ItemsongComponent } from './components/itemsong/itemsong.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListsongsComponent,
-    AddsongComponent
+    AddsongComponent,
+    ItemsongComponent
   ],
   imports: [
     BrowserModule,

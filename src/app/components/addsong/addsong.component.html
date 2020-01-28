@@ -3,10 +3,10 @@
         <button [routerLink]="['']">Lista Canciones</button>
     </div>
     <div>
-        Nombre Cancion: <textarea name="" id="" cols="30" rows="5"></textarea>
-        Artista: <textarea name="" id="" cols="30" rows="5"></textarea>
-        Album: <textarea name="" id="" cols="30" rows="5"></textarea>
-        Año: <input type="year" maxlength="4">
-        <button>GUARDAR</button>
+        Nombre Cancion: <textarea #nameSong cols="30" rows="5"></textarea>
+        Artista: <textarea #nameArtista cols="30" rows="5"></textarea>
+        Album: <textarea #nameAlbum cols="30" rows="5"></textarea>
+        Año: <input #anio type="text" maxlength="4">
+        <button (click)="addItem()">GUARDAR</button>
     </div>
 </section>

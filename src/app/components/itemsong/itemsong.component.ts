@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-itemsong',
@@ -8,6 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class ItemsongComponent implements OnInit {
 
   constructor() { }
+
+  @Input() nameCancion: string;
+  
+  @Input() nameArtista: string;
+  
+  @Input() nameAlbum: string;
+  
+  @Input() anio: string;
 
   ngOnInit() {
   }

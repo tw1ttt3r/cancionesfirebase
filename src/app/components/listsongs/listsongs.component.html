@@ -3,6 +3,13 @@
         <button [routerLink]="['add']">Agrega Canción</button>
     </div>
     <div #tablaCanciones>
+        <!-- <app-itemsong 
+            *ngFor="let song of songs$ | async | json" 
+            nameCancion="song.name" 
+            nameArtista="song.artista"
+            nameAlbum="song.album"
+            anio="song.anio">
+        </app-itemsong> -->
         {{songs$ | async | json}}
     </div>
 </section>

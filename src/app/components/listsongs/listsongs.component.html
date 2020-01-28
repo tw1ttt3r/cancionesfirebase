@@ -2,5 +2,7 @@
     <div>
         <button [routerLink]="['add']">Agrega Canción</button>
     </div>
-    <div #tablaCanciones></div>
+    <div #tablaCanciones>
+        {{songs$ | async | json}}
+    </div>
 </section>

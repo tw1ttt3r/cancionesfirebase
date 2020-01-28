@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { DatabaseFirebaseService } from 'src/app/services/database-firebase.service';
+import { Observable } from 'rxjs';
+
+import itemsong from '../../interfaces/itemsong';
 
 @Component({
   selector: 'app-listsongs',
@@ -7,9 +11,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListsongsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private db: DatabaseFirebaseService) { }
 
+  songs$: Observable<itemsong[]>
+    
   ngOnInit() {
+    this.songs$ = this.db.getSongs();
   }
 
 }

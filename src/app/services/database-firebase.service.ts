@@ -17,5 +17,14 @@ export class DatabaseFirebaseService {
     return this.collection$.valueChanges();
   }
 
-  addSong() {}
+  addSong( newSong: itemsong) {
+    let guardada = null;
+    try{
+      this.collection$.add(newSong)
+      guardada = true;
+    } catch(e) {
+      guardada = e;
+    }
+    return guardada
+  }
 }
